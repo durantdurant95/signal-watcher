@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/client"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Watchlist {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  terms       String   // JSON string instead of array
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  events Event[]
+
+  @@map("watchlists")
+}
+
+model Event {
+  id           String    @id @default(cuid())
+  type         String
+  description  String
+  metadata     String    @default("{}") // JSON string instead of Json type
+  watchlistId  String
+  
+  // AI Analysis
+  aiSummary       String?
+  aiSeverity      String?  // String instead of enum
+  aiSuggestedAction String?
+  aiProcessedAt   DateTime?
+  
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  // Relations
+  watchlist    Watchlist @relation(fields: [watchlistId], references: [id], onDelete: Cascade)
+
+  @@map("events")
+}

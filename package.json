@@ -1,0 +1,27 @@
+{
+  "name": "signal-watcher",
+  "version": "1.0.0",
+  "description": "AI-powered security monitoring platform",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm run dev:backend\" \"pnpm run dev:frontend\"",
+    "dev:backend": "pnpm --filter @signal-watcher/backend dev",
+    "dev:frontend": "pnpm --filter @signal-watcher/frontend dev",
+    "build": "pnpm --filter @signal-watcher/backend build && pnpm --filter @signal-watcher/frontend build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "db:setup": "pnpm --filter @signal-watcher/database db:generate && pnpm --filter @signal-watcher/database db:migrate",
+    "db:studio": "pnpm --filter @signal-watcher/database db:studio",
+    "clean": "pnpm -r clean"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}

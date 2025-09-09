@@ -1,0 +1,54 @@
+# Node
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+/dist/
+/.next/
+/.vercel/
+/.turbo/
+
+# Env files
+.env
+.env.*
+
+# Database
+*.sqlite
+*.db
+/prisma/dev.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Coverage
+coverage/
+
+# Misc
+*.swp
+*.swo
+
+# Monorepo
+apps/*/node_modules/
+packages/*/node_modules/
+apps/*/.next/
+apps/*/.vercel/
+apps/*/.turbo/
+apps/*/dist/
+packages/*/dist/
+
+# Prisma
+prisma/migrations/
+
+# Others
+*.local
