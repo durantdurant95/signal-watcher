@@ -1,10 +1,10 @@
 # Frontend - Next.js Application 🎨
 
-This document covers the Next.js 14 frontend setup with App Router, shadcn/ui, and TypeScript.
+This document covers the Next.js 15 frontend setup with App Router, shadcn/ui, and TypeScript.
 
 ## 🏗️ Architecture Overview
 
-The frontend uses Next.js 14 with the new App Router pattern and modern React patterns:
+The frontend uses Next.js 15 with the new App Router pattern and modern React patterns:
 
 ```
 apps/frontend/
@@ -13,7 +13,7 @@ apps/frontend/
 
 # Frontend - Next.js Application 🎨
 
-This guide covers the Next.js 14/15 frontend setup using App Router, shadcn/ui, TypeScript, and integration with a separate backend API.
+This guide covers the Next.js 15 frontend setup using App Router, shadcn/ui, TypeScript, and integration with a separate backend API.
 
 ## 🏗️ Architecture Overview
 
@@ -137,4 +137,5 @@ pnpm lint
 5. Deploy to Vercel or Render
 
 The frontend is modern, accessible, and designed for maintainability and performance.
+
 <form onSubmit={handleSubmit}>
