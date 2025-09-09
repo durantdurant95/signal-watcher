@@ -1,9 +1,6 @@
 "use server";
 
-import {
-  CreateWatchlistRequest,
-  UpdateWatchlistRequest,
-} from "@signal-watcher/shared";
+import { CreateWatchlistRequest, UpdateWatchlistRequest } from "@/shared";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { DAL } from "./dal";
