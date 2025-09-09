@@ -6,11 +6,6 @@ This document covers the Next.js 15 frontend setup with App Router, shadcn/ui, a
 
 The frontend uses Next.js 15 with the new App Router pattern and modern React patterns:
 
-```
-apps/frontend/
-├── app/                    # App Router (no src folder)
-│   ├── globals.css        # Global styles
-
 # Frontend - Next.js Application 🎨
 
 This guide covers the Next.js 15 frontend setup using App Router, shadcn/ui, TypeScript, and integration with a separate backend API.
@@ -18,27 +13,6 @@ This guide covers the Next.js 15 frontend setup using App Router, shadcn/ui, Typ
 ## 🏗️ Architecture Overview
 
 The frontend uses Next.js App Router with server components, shadcn/ui, and Tailwind CSS:
-
-```
-
-apps/frontend/
-├── app/ # App Router (no src folder)
-│ ├── globals.css # Global styles
-│ ├── layout.tsx # Root layout
-│ └── page.tsx # Main page (server component)
-├── components/ # React components
-│ ├── ui/ # shadcn/ui components
-│ ├── EventList.tsx # Event list (server component)
-│ ├── Watchlist.tsx # Watchlist section (server component)
-│ ├── CreateWatchlistForm.tsx # Dialog form for new watchlist
-│ └── ...
-├── lib/ # Utilities and API client
-│ ├── api.ts # Backend API client
-│ └── actions.ts # Server actions
-├── package.json
-└── tsconfig.json
-
-````
 
 ## 🎯 Key Features
 
@@ -103,7 +77,7 @@ pnpm type-check
 
 # Linting
 pnpm lint
-````
+```
 
 ## 🛠️ Configuration
 
